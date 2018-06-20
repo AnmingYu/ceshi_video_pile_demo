@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        >
+        <!-- android:text="序号"-->
+        <TextView
+            android:id="@+id/tv_ordinal"
+            style="@style/itemForms" />
+        <!--  android:text="时间"-->
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/itemForms"
+
+            />
+        <!-- android:text="事件源"-->
+        <TextView
+            android:id="@+id/tv_event"
+            style="@style/itemForms"
+
+            />
+        <!--android:text="物体类型"-->
+        <TextView
+            android:id="@+id/tv_genre"
+            style="@style/itemForms"
+
+            />
+        <!--android:text="状态"-->
+        <TextView
+            android:id="@+id/tv_state"
+            style="@style/itemForms"
+
+            />
+        <!--  android:text="车牌号"-->
+        <TextView
+            android:id="@+id/tv_plateNumbersItem"
+            style="@style/itemForms"
+
+            />
+        <!--  android:text="占位比"-->
+        <TextView
+            android:id="@+id/tv_perch"
+            style="@style/itemForms"
+
+            />
+        <!-- android:text="图片"-->
+        <TextView
+            android:id="@+id/tv_map"
+            style="@style/itemForms"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

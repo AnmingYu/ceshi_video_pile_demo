@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorThinGreen"
+    tools:context="com.example.administrator.videopiledemo.videoActivity.maintain.equipmentManagement.SetPictureActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_sosSetPicture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/sos" />
+
+        <Button
+            android:id="@+id/bt_backSetPicture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/backtrack" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+
+        >
+        <TextView
+            android:id="@+id/tv_stallPaySetPicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改线圈"
+            android:textColor="@color/colorBlack"
+            android:textSize="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+
+        <TextView
+            android:id="@+id/tv_dianSetPicture"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:id="@+id/bt_leftSetPicture"
+            android:layout_marginTop="20dp"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/tv_stallPaySetPicture"
+            android:layout_toLeftOf="@id/tv_dianSetPicture"
+            android:background="@drawable/button_camera_discolor_left"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp"
+            />
+
+        <Button
+            android:id="@+id/bt_rightSetPicture"
+            android:layout_marginTop="20dp"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/tv_stallPaySetPicture"
+            android:layout_toRightOf="@id/tv_dianSetPicture"
+            android:background="@drawable/button_camera_discolor_reght"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        >
+        <ImageView
+            android:id="@+id/iv_pictureSetPicture"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_centerHorizontal="true"
+
+            />
+        <TextView
+            android:id="@+id/tv_setPic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/bt_confirmSetPicture"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_pictureSetPicture"
+            android:layout_toLeftOf="@id/tv_setPic"
+            android:text="确定"
+            />
+        <Button
+            android:id="@+id/bt_amendSetPicture"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_pictureSetPicture"
+            android:layout_toRightOf="@id/tv_setPic"
+            android:text="修改"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

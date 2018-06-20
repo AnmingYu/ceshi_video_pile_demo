@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pagesetting"
+    tools:context="com.example.administrator.videopiledemo.videoActivity.pay.PayActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="2">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/bt_back"
+                style="@style/backtrack" />
+            <TextView
+                android:text="返回"
+                android:layout_toRightOf="@id/bt_back"
+                style="@style/backtrackName" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_sos"
+            style="@style/sosImage" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.3">
+
+        </LinearLayout>
+        <!-- 内容-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+            <!--按照车位支付-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_stallPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="按车位支付"
+                    android:textColor="@color/colorshallowBlue"
+                    android:textSize="35dp" />
+
+                <ImageView
+                    android:id="@+id/iv_pillar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/tv_stallPay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/camer" />
+
+                <TextView
+                    android:id="@+id/tv_dian"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_pillar"
+                    android:layout_centerHorizontal="true" />
+
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/bt_left"
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/iv_pillar"
+                    android:layout_toLeftOf="@id/tv_dian"
+                    android:layout_marginRight="10dp"
+                    android:hint="左"
+                    android:background="@drawable/button_left_side_selector"
+                    />
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/bt_right"
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/iv_pillar"
+                    android:layout_toRightOf="@id/tv_dian"
+                    android:layout_marginLeft="10dp"
+                    android:hint="右"
+                    android:background="@drawable/button_offside_selector"
+                    />
+            </RelativeLayout>
+
+            <TextView
+
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/partingline" />
+            <!--按照车牌号支付-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_plateNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="按车牌号支付"
+                    android:textColor="@color/colorshallowBlue"
+                    android:textSize="35dp" />
+
+                <EditText
+                    android:id="@+id/et_licensePlateNumber"
+                    android:layout_width="400dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_plateNumber"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/etinput"
+                    android:gravity="center"
+                    android:hint="请输入车牌号码"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="#03A9F4" />
+
+
+                <Button
+
+                    android:id="@+id/bt_determine"
+                    android:layout_width="400dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/et_licensePlateNumber"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/button_confirm_cancel_pay"
+                    android:text="确定"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="25dp"
+                    android:layout_centerHorizontal="true"
+                    />
+                <Button
+                    android:id="@+id/bt_cancel"
+                    android:layout_width="400dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/bt_determine"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/button_confirm_cancel_pay"
+                    android:text="取消"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="25dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+
+
+               <!-- <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp" />-->
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="支持两种付费方式：按车位或者车牌号付费"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

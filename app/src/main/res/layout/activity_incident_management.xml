@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pagesetting"
+    tools:context="com.example.administrator.videopiledemo.videoActivity.maintain.incidentManagement.IncidentManagementActivity">
+    <!--顶部操作，返回事件 -->
+    <RelativeLayout
+        android:id="@+id/rl_topbrowsing"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/rl_backmaintain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bt_backMainBrowsing"
+                style="@style/backtrack" />
+
+            <TextView
+                android:id="@+id/tv_fanhui"
+                style="@style/backtrackName"
+                android:layout_toRightOf="@id/bt_backMainBrowsing"
+                android:text="返回" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_maintainsosIncident"
+            style="@style/sosImage" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        ></RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:id="@+id/rl_eventQuery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <Button
+                android:id="@+id/bt_eventQuery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/eventquery"
+                 />
+
+            <TextView
+                android:text="@string/eventQuery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colocBluenAnming"
+                android:layout_below="@id/bt_eventQuery"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_warningQuery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            >
+
+            <Button
+                android:id="@+id/bt_warningQuery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/warningquery"
+               />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warningQuery"
+                android:textColor="@color/colocBluenAnming"
+                android:textSize="30dp"
+                android:layout_below="@id/bt_warningQuery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+
+                />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

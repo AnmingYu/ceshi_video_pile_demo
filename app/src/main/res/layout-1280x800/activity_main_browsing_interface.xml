@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/cellphonesetting"
+    tools:context="com.example.administrator.videopiledemo.videoActivity.maintain.mainBrowsingInterface.MainBrowsingInterfaceActivity">
+    <!--顶部操作，返回事件 -->
+    <RelativeLayout
+        android:id="@+id/rl_topbrowsing"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.8">
+
+        <RelativeLayout
+            android:id="@+id/rl_backmaintain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bt_backMainBrowsing"
+                android:background="@drawable/backtrack"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_fanhui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/bt_backMainBrowsing"
+                android:text="返回" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bt_facilityone"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:autoSizeMaxTextSize="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/rl_backmaintain"
+            android:background="@drawable/c" />
+
+        <Button
+            android:id="@+id/bt_facilitytwo"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:autoSizeMaxTextSize="5dp"
+            android:layout_toRightOf="@id/bt_facilityone"
+            android:background="@drawable/ctwo" />
+
+        <ImageView
+            android:id="@+id/iv_maintainsosIncident"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sos"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical">
+        <!--视频显示区域-->
+        <LinearLayout
+            android:id="@+id/ll_middleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+            <!-- 视频显示框-->
+            <LinearLayout
+                android:id="@+id/ll_videodisplayFrame"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_left"
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent" />
+
+                <VideoView
+                    android:id="@+id/vv_cameraone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_division"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent" />
+
+                <VideoView
+                    android:id="@+id/vv_cameratwo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_divisionRight"
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 对视频框进行操作-->
+        <LinearLayout
+            android:id="@+id/ll_shipin_browsing"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/rl_ControlPicture"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:background="@color/colorBlack">
+
+
+                <Button
+                    android:id="@+id/bt_playButtonmain"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/startplaying" />
+
+                <Button
+                    android:id="@+id/bt_fullScreen"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/bt_ProcAmp"
+                    android:layout_marginRight="5dp"
+
+                    android:background="@drawable/fullscreen" />
+
+                <Button
+                    android:id="@+id/bt_uniformScreen"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@id/bt_fullScreen"
+                    android:background="@drawable/uniformscreen" />
+
+                <Button
+                    android:id="@+id/bt_ProcAmp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/bt_uniformScreen"
+                    android:background="@drawable/procamp" />
+
+                <Button
+                    android:id="@+id/bt_historicalStorage"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/bt_ProcAmp"
+                    android:background="@drawable/button_main_selector"
+                    android:text="@string/historicalStorage"
+                    android:textSize="10dp" />
+
+                <Button
+                    android:id="@+id/bt_RVC"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/bt_historicalStorage"
+                    android:background="@drawable/button_main_selector"
+                    android:text="@string/RVC"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="17dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_propertybrowsing"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2">
+
+            <LinearLayout style="@style/ll_main_browsing"></LinearLayout>
+            <!--运动-->
+            <LinearLayout
+                android:id="@+id/ll_exercise"
+                style="@style/ll_main_browsing">
+
+                <Button
+                    android:id="@+id/bt_exercise"
+                    style="@style/butt_browsing"
+                    android:background="@drawable/cyan_quadrangle" />
+
+                <TextView
+                    android:id="@+id/tv_exercise"
+                    style="@style/tv_browsing"
+                    android:text="@string/exercise" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main_browsing"></LinearLayout>
+            <!--车牌-->
+            <LinearLayout
+                android:id="@+id/ll_plateNumber"
+                style="@style/ll_main_browsing">
+
+                <Button
+                    android:id="@+id/bt_plateNumber"
+                    style="@style/butt_browsing"
+                    android:background="@drawable/platenumbertwo" />
+
+                <TextView
+                    android:id="@+id/tv_plateNumber"
+                    style="@style/tv_browsing"
+                    android:text="@string/plateNumber"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main_browsing"></LinearLayout>
+            <!--物类-->
+            <LinearLayout
+                android:id="@+id/ll_fauna"
+                style="@style/ll_main_browsing">
+
+                <Button
+                    android:id="@+id/bt_fauna"
+                    style="@style/butt_browsing"
+                    android:background="@drawable/fauna" />
+                <!--@string/fauna-->
+                <TextView
+                    android:id="@+id/tv_fauna"
+                    style="@style/tv_browsing"
+                    android:text="@string/fauna"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main_browsing"></LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btnPage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!--占位用的-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"></LinearLayout>
+
+            <!-- 添加视频信息-->
+            <LinearLayout
+                android:id="@+id/rl_SuperpositionOfImages"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:orientation="horizontal">
+
+
+                <!--关闭-->
+                <LinearLayout
+                    android:id="@+id/ll_start"
+                    style="@style/ll_main_browsing">
+
+                    <Button
+                        android:id="@+id/bt_start"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/ellipse"
+                        android:layout_marginLeft="3dp"
+                       />
+
+                    <TextView
+                        android:id="@+id/tv_start"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/start"
+                        android:textColor="@color/colorBlack"
+
+                        />
+                </LinearLayout>
+                <!--叠加-->
+                <LinearLayout
+                    android:id="@+id/ll_superposition"
+                    style="@style/ll_main_browsing">
+
+                    <Button
+                        android:id="@+id/bt_superposition"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/bt_start"
+                        android:background="@drawable/overlay" />
+
+                    <TextView
+                        android:id="@+id/tv_superposition"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/superposition"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--占位用的-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"></LinearLayout>
+
+        </LinearLayout>
+        <!-- 隐藏表单时出现的操作框-->
+        <RelativeLayout
+            android:id="@+id/rl_openForm"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:background="#327be2">
+
+            <Button
+                android:id="@+id/bt_upward"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/upward"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                />
+
+            <Button
+                android:id="@+id/bt_wicket"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toLeftOf="@id/bt_upward"
+                android:background="@drawable/wicket" />
+
+            <Button
+                android:id="@+id/bt_nail"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/bt_wicket"
+                android:background="@drawable/nail"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <!-- 显示表单时出现的操作框-->
+        <LinearLayout
+            android:id="@+id/ll_downwardOperatingBox"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.3"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_closeForm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="#327be2"
+                android:visibility="gone"
+
+                >
+
+                <Button
+                    android:id="@+id/bt_upwardtwo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/downward" />
+
+                <Button
+                    android:id="@+id/bt_wickettwo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toLeftOf="@id/bt_upwardtwo"
+                    android:background="@drawable/wicket" />
+
+                <Button
+                    android:id="@+id/bt_nailtwo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/bt_wickettwo"
+                    android:background="@drawable/nail"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--表单框1-->
+        <LinearLayout
+            android:id="@+id/LL_form"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_topbrowsingform"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_maintainsosIncidentform"
+                    style="@style/incidentmanagement" />
+
+                <Button
+                    android:id="@+id/bt_backMainBrowsingform"
+                    style="@style/iconSOS" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_seeks"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <EditText
+                    android:id="@+id/et_seek"
+                    android:layout_width="150dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/etinput"
+                    android:gravity="center"
+                    android:text="请输入搜索信息"
+                    android:textColor="#BBBBBB"
+                    android:textSize="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_seek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/et_seek"
+                    android:text="搜索"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+            <!--标题框-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+
+                >
+                <!--序号 -->
+                <TextView
+                    android:id="@+id/tv_ordinalmainBowsing"
+
+                    android:text="@string/ordinal"
+                    style="@style/text_main_browsing_shouji" />
+                <!--时间-->
+                <TextView
+                    android:id="@+id/tv_timemainBowsing"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/time" />
+                <!--事件源-->
+                <TextView
+                    android:id="@+id/tv_eventBowsing"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/event" />
+                <!--物体类型 -->
+                <TextView
+                    android:id="@+id/tv_genreBowsing"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/genre" />
+                <!--状态-->
+                <TextView
+
+                    android:id="@+id/tv_stateBowsing"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/state" />
+                <!--车牌号-->
+                <TextView
+                    android:id="@+id/tv_plateNumbersBowsing"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/plateNumbers" />
+                <!--占位比-->
+                <TextView
+                    android:id="@+id/tv_perchBowsing"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/perch" />
+                <!--图片-->
+                <TextView
+                    android:id="@+id/tv_topBowsing"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/top" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_forms"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"></ListView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_alarm"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colocBluenAnming"
+                    android:text="@string/alarm" />
+
+                <Button
+                    android:id="@+id/bt_incident"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/bt_alarm"
+                    android:text="事件" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!--表单框2-->
+        <LinearLayout
+            android:id="@+id/LL_formtwo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_topbrowsingformtwo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_maintainsosIncidentformtwo"
+                    style="@style/incidentmanagement" />
+
+                <Button
+                    android:id="@+id/bt_backMainBrowsingformtwo"
+                    style="@style/iconSOS" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_seekstwo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et_seektwo"
+                    android:layout_width="150dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/etinput"
+                    android:gravity="center"
+                    android:text="请输入搜索信息"
+                    android:textColor="#BBBBBB"
+                    android:textSize="10dp"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_seektwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/et_seektwo"
+                    android:text="搜索"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+            <!--标题框-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+
+                >
+                <!--序号-->
+                <TextView
+                    android:id="@+id/tv_ordinalmainBowsingtwo"
+                    style="@style/text_main_browsing_shouji"
+
+                    android:text="@string/ordinal" />
+                <!--时间-->
+                <TextView
+                    android:id="@+id/tv_timemainBowsingtwo"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/time" />
+                <!--事件源-->
+                <TextView
+                    android:id="@+id/tv_eventBowsingtwo"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/event" />
+                <!--物体类型-->
+                <TextView
+                    android:id="@+id/tv_genreBowsingtwo"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/genre" />
+                <!--状态-->
+                <TextView
+
+                    android:id="@+id/tv_stateBowsingtwo"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/state" />
+                <!--车牌号-->
+                <TextView
+                    android:id="@+id/tv_plateNumbersBowsingtwo"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/plateNumbers" />
+                <!--占位比-->
+                <TextView
+                    android:id="@+id/tv_perchBowsingtwo"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/perch" />
+                <!--图片-->
+                <TextView
+                    android:id="@+id/tv_topBowsingtwo"
+                    style="@style/text_main_browsing_shouji"
+                    android:text="@string/top" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_formsIncident"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"></ListView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_alarmtwo"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colocBluenAnming"
+                    android:text="@string/alarm" />
+
+                <Button
+                    android:id="@+id/bt_incidenttwo"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/bt_alarmtwo"
+                    android:text="事件"
+
+
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

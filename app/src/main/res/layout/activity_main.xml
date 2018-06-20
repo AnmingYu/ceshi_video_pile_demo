@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pagesetting"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.videopiledemo.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id="@+id/iv_sos"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sos"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            />
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/backtrack"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            ></RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent">
+            </LinearLayout>
+            <!--左侧-->
+            <RelativeLayout
+                android:layout_alignParentLeft="true"
+                android:id="@+id/ll_lefthand"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+            >
+                <!--咨询-->
+                <LinearLayout
+                    android:id="@+id/LL_consult"
+                    style="@style/mainlefthand">
+                    <Button
+                        android:id="@+id/bt_consult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/consult"
+
+                       />
+                    <LinearLayout
+                        style="@style/maincontext"
+                        >
+                        <TextView
+                            android:id="@+id/tv_consult"
+                            style="@style/mainText"
+                            android:text="@string/consultName" />
+                        <TextView
+
+                            android:text="@string/consult"
+                            style="@style/contentText" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <!--充电-->
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/ll_chrge"
+                    android:layout_below="@id/LL_consult"
+                    style="@style/mainlefthand"
+                    >
+                    <Button
+                        android:id="@+id/bt_chrge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/chrge"
+
+                        />
+                    <LinearLayout
+                        style="@style/maincontext"
+                        >
+                        <TextView
+                            android:id="@+id/tv_chrgeName"
+                            style="@style/mainText"
+                            android:text="@string/chrgeName"
+
+                            />
+                        <TextView
+
+                            android:text="@string/chrgeContext"
+                            style="@style/contentText"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--维护-->
+                <LinearLayout
+                    android:id="@+id/ll_maintain"
+                    android:layout_below="@id/ll_chrge"
+                    style="@style/mainlefthand"
+                    android:layout_marginTop="10dp"
+                    >
+                    <Button
+                        android:id="@+id/bt_maintain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/maintain"
+                       />
+                    <LinearLayout
+                        style="@style/maincontext"
+                        >
+                        <TextView
+                            android:id="@+id/tv_maintainName"
+                            style="@style/mainText"
+                            android:text="@string/maintainName"
+                            />
+                        <TextView
+                            style="@style/contentText"
+                            android:text="@string/maintainContext"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <!--右侧-->
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:id="@+id/ll_offside"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <!--停车-->
+                <LinearLayout
+                    android:id="@+id/LL_park"
+                    style="@style/mainlefthand">
+                  <!--  <Button
+                        android:id="@+id/bt_park"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/consult"
+                        />-->
+                    <Button
+                        android:id="@+id/bt_park"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/park"
+                        />
+                    <LinearLayout
+                        style="@style/maincontext"
+                        >
+                        <TextView
+                            android:id="@+id/tv_packName"
+                            android:text="@string/parkName"
+                            style="@style/mainText" />
+                        <TextView
+                            android:text="@string/parkContext"
+                            style="@style/contentText" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--付费-->
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/LL_pay"
+                    style="@style/mainlefthand">
+                    <Button
+                        android:id="@+id/bt_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pay"
+                       />
+                    <LinearLayout
+                        style="@style/maincontext"
+                        >
+                        <TextView
+                            android:id="@+id/tv_payName"
+                            android:text="@string/payName"
+                            style="@style/mainText" />
+                        <TextView
+                            android:text="@string/payContext"
+                            style="@style/contentText" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"></LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

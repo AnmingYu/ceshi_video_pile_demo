@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cellphonesetting"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.videopiledemo.videoActivity.maintain.mainBrowsingInterface.DetailsFormsActivity">
+    <!--顶部操作，返回事件 -->
+    <RelativeLayout
+        android:id="@+id/rl_topdetails"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.5">
+
+        <RelativeLayout
+            android:id="@+id/rl_backdetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bt_backdetails"
+                android:background="@drawable/backtrack"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_fanhuidetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/bt_backdetails"
+
+                android:text="返回" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_maintainsosdetails"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sos"
+            android:layout_alignParentRight="true"  />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        >
+        <ImageView
+            android:id="@+id/iv_realtimeImage"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/meinv"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <!--序号-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_xuhao"
+                    style="@style/detailsForms"
+                    android:text="序号：" />
+
+                <TextView
+                    android:id="@+id/tv_ordinalDetails"
+                    style="@style/detailsFormsContent"
+                    android:layout_toRightOf="@id/tv_xuhao"
+                    android:text="001" />
+            </RelativeLayout>
+            <!--时间-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_timeDetails"
+                    style="@style/detailsForms"
+                    android:text="时间：" />
+
+                <TextView
+                    android:id="@+id/tv_timsDetailsContext"
+                    style="@style/detailsFormsContent"
+                    android:layout_toRightOf="@id/tv_timeDetails"
+                    android:text="06/14/13:30" />
+            </RelativeLayout>
+            <!--事件源-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_eventDetails"
+                    style="@style/detailsForms"
+                    android:text="事件源：" />
+
+                <TextView
+                    android:id="@+id/tv_eventDetailsContext"
+                    style="@style/detailsFormsContent"
+                    android:layout_toRightOf="@id/tv_eventDetails"
+                    android:text="告警" />
+            </RelativeLayout>
+            <!--物体类型-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_genreDetails"
+                    style="@style/detailsForms"
+                    android:text="物体类型：" />
+
+                <TextView
+                    android:id="@+id/tv_genreDetailsContext"
+                    style="@style/detailsFormsContent"
+                    android:layout_toRightOf="@id/tv_genreDetails"
+                    android:text=" 未知" />
+            </RelativeLayout>
+            <!--状态-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_stateDetails"
+                    style="@style/detailsForms"
+                    android:text="状态：" />
+
+                <TextView
+                    android:id="@+id/tv_stateDetailsContext"
+                    style="@style/detailsFormsContent"
+                    android:layout_toRightOf="@id/tv_stateDetails"
+                    android:text="未知" />
+            </RelativeLayout>
+            <!--车牌号-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_plateDetails"
+                    style="@style/detailsForms"
+                    android:text="车牌号：" />
+
+                <TextView
+                    android:id="@+id/tv_plateDetailsContext"
+                    style="@style/detailsFormsContent"
+                    android:layout_toRightOf="@id/tv_plateDetails"
+                    android:text="豫A.888888" />
+            </RelativeLayout>
+            <!--占位比-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_perchDetails"
+                    style="@style/detailsForms"
+                    android:text="占位比：" />
+
+                <TextView
+                    android:id="@+id/tv_perchDetailsContext"
+                    style="@style/detailsFormsContent"
+                    android:layout_toRightOf="@id/tv_perchDetails"
+                    android:text="未知" />
+            </RelativeLayout>
+            <!--占位用-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/text"
+                    style="@style/detailsForms"
+                    android:text="车牌号：" />
+
+                <TextView
+                    android:id="@+id/tv_teetDetailsContext"
+                    style="@style/detailsFormsContent"
+
+                    android:layout_toRightOf="@id/text" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        ></LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        />
+</LinearLayout>

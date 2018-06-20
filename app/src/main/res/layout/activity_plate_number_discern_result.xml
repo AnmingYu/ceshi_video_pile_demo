@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorThinGreen"
+    tools:context="com.example.administrator.videopiledemo.videoActivity.maintain.mainBrowsingInterface.PlateNumberDiscernResultActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_topbrowsing"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_maintainsosIncident"
+            style="@style/incidentmanagement" />
+
+        <Button
+            android:id="@+id/bt_backMainBrowsing"
+            style="@style/iconSOS" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_PlateName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/plateName"
+            android:textColor="@color/colorBlack"
+            android:textSize="40dp" />
+
+        <ImageView
+            android:id="@+id/iv_plateImage"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/timg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:id="@+id/tv_weizi"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tv_plateNumblesName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_weizi"
+                android:text="@string/plateNumbles"
+                android:textColor="@color/colorBlack"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/tv_plateNumblesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_weizi"
+                android:textColor="@color/colorGreen"
+                android:textSize="25dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/tv_weizitwo"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/bt_confirm"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@id/tv_weizitwo"
+                android:text="@string/confirm"
+                android:textColor="@color/colorBlack"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/bt_abnormity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_weizitwo"
+                android:text="@string/abnormity"
+                android:textSize="25dp"
+
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

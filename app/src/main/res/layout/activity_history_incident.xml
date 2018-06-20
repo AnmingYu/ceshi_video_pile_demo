@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_historyActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pagesetting"
+    tools:context="com.example.administrator.videopiledemo.videoActivity.maintain.incidentManagement.HistoryIncidentActivity">
+
+    <!--顶部操作，返回事件 -->
+    <RelativeLayout
+        android:id="@+id/rl_tophistory"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.8">
+
+        <RelativeLayout
+            android:id="@+id/rl_backhistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bt_backhinstory"
+                style="@style/backtrack" />
+
+            <TextView
+                android:id="@+id/tv_fanhuihistory"
+                style="@style/backtrackName"
+                android:layout_toRightOf="@id/bt_backhinstory"
+                android:text="返回" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_maintainsosIncident"
+            style="@style/sosImage" />
+    </RelativeLayout>
+    <!--视频显示区域-->
+    <LinearLayout
+        android:id="@+id/ll_middleLayoutHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="horizontal"
+        >
+        <!-- 视频显示框-->
+        <LinearLayout
+            android:id="@+id/ll_videodisplayFrame"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_left"
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+
+            <VideoView
+                android:id="@+id/vv_cameraonehistory"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_divisionzhong"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+
+            <VideoView
+                android:id="@+id/vv_cameratwohistory"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_divisionRight"
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_historycontrol"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rl_ControlPicture"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="9"
+            android:background="@color/colorBlack"
+
+            >
+
+            <Button
+                android:id="@+id/bt_playButtonmainhistory"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/startplaying"
+                android:layout_alignBaseline="@+id/bt_uniformScreenhistory"
+                android:layout_alignBottom="@+id/bt_uniformScreenhistory"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="12dp" />
+
+            <Button
+                android:id="@+id/bt_fullScreenhistory"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/fullscreen" />
+
+            <Button
+                android:id="@+id/bt_uniformScreenhistory"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@id/bt_fullScreenhistory"
+                android:background="@drawable/uniformscreen" />
+
+            <Button
+                android:id="@+id/bt_ProcAmphistory"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/bt_uniformScreenhistory"
+                android:layout_alignBottom="@+id/bt_uniformScreenhistory"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/bt_uniformScreenhistory"
+                android:layout_toStartOf="@+id/bt_uniformScreenhistory"
+                android:background="@drawable/procamp" />
+
+            <Button
+                android:id="@+id/bt_historicalStorage"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_toLeftOf="@id/bt_ProcAmphistory"
+                android:background="@drawable/button_main_selector"
+                android:text="@string/historicalEvents"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_formsHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+        <!-- 隐藏表单时出现的操作框-->
+        <RelativeLayout
+            android:id="@+id/rl_openFormhistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="#327be2">
+
+            <Button
+                android:id="@+id/bt_upwardhistory"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/upward"
+
+                />
+
+            <Button
+                android:id="@+id/bt_wickethistory"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toLeftOf="@id/bt_upwardhistory"
+                android:background="@drawable/wicket" />
+
+            <Button
+                android:id="@+id/bt_nailhistory"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/bt_wickethistory"
+                android:background="@drawable/nail"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="18dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </LinearLayout>
+    <!--顶部操作，返回事件 -->
+    <RelativeLayout
+        android:id="@+id/rl_tophistorytwo"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.2"
+        android:visibility="gone"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_backhistorytwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bt_backhinstorytwo"
+                style="@style/backtrack" />
+
+            <TextView
+                android:id="@+id/tv_fanhuihistorytwo"
+                style="@style/backtrackName"
+                android:layout_toRightOf="@id/bt_backhinstorytwo"
+                android:text="返回" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_maintainsosIncidenttwo"
+            style="@style/sosImage" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_historyseek"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/et_seekhistory"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/etinput"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:hint="请输入搜索信息"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorWhite" />
+        <Button
+            android:id="@+id/bt_seekhistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="搜索"
+            android:textSize="25dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_formsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <!--标题框-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            >
+            <!--序号-->
+            <TextView
+                android:id="@+id/tv_ordinalmainBowsingtwo"
+                android:text="@string/ordinal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/colocBluenAnming"
+                 />
+            <!--时间-->
+            <TextView
+                android:id="@+id/tv_timemainBowsingtwo"
+                style="@style/text_main_browsing"
+                android:text="@string/time"
+                />
+            <!--事件源-->
+            <TextView
+                android:id="@+id/tv_eventBowsingtwo"
+                style="@style/text_main_browsing"
+                android:text="@string/event"
+                />
+            <!--物体类型-->
+            <TextView
+                android:id="@+id/tv_genreBowsingtwo"
+                style="@style/text_main_browsing"
+                android:text="@string/genre"
+                />
+            <!--状态-->
+            <TextView
+
+                android:id="@+id/tv_stateBowsingtwo"
+                style="@style/text_main_browsing"
+                android:text="@string/state"
+                />
+            <!--车牌号-->
+            <TextView
+                android:id="@+id/tv_plateNumbersBowsingtwo"
+                style="@style/text_main_browsing"
+                android:text="@string/plateNumbers"
+                />
+            <!--占位比-->
+            <TextView
+                android:id="@+id/tv_perchBowsingtwo"
+                style="@style/text_main_browsing"
+                android:text="@string/perch"
+                />
+            <!--图片-->
+            <TextView
+                android:id="@+id/tv_topBowsingtwo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/colocBluenAnming"
+                android:text="@string/top"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_history"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            >
+
+            <ListView
+                android:id="@+id/lv_history"
+                android:layout_marginTop="2dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

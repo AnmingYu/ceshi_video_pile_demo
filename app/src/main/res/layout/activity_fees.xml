@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pagesetting"
+    tools:context="com.example.administrator.videopiledemo.videoActivity.pay.FeesActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <RelativeLayout
+            android:id="@+id/rl_backtrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/bt_backtrack"
+                style="@style/backtrack" />
+
+            <TextView
+                android:text="返回"
+                android:layout_toRightOf="@id/bt_backtrack"
+                style="@style/backtrackName" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_sosfees"
+            style="@style/sosImage" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.2"
+            ></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            >
+            <!--标题栏-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="当前停车费用"
+                    android:textColor="@color/colorshallowBlue"
+                    android:textSize="35dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent">
+                </LinearLayout>
+                <!--左侧-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <!--开始时间-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:text="@string/beginTimeName"
+                            style="@style/feesName" />
+                        <TextView
+                            android:id="@+id/tv_beginTime"
+                            android:text="@string/beginTimeContent"
+                            style="@style/feesContent" />
+                    </LinearLayout>
+                    <!--停车时长-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TextView
+                            android:text="@string/timeBucketName"
+
+                            style="@style/feesName" />
+                        <TextView
+                            android:id="@+id/tv_timeBucket"
+                            android:text="@string/timeBucketContent"
+                            style="@style/feesContent" />
+                    </LinearLayout>
+                    <!--车牌号码-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TextView
+                            android:text="@string/plateNumbersName"
+                            style="@style/feesName" />
+                        <TextView
+                            android:id="@+id/tv_plateNumbers"
+                            android:text="@string/plateNumbersContent"
+                            style="@style/feesContent" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--右侧-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <!--结束时间-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TextView
+                            android:text="@string/endtimeName"
+
+                            style="@style/feesName" />
+                        <TextView
+                            android:id="@+id/tv_endtime"
+                            android:text="@string/endtimeContent"
+                            style="@style/feesContent" />
+                    </LinearLayout>
+                    <!--停车费用-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TextView
+                            android:text="@string/parkingFeeName"
+
+                            style="@style/feesName" />
+                        <TextView
+                            android:id="@+id/tv_parkingFee"
+                            android:text="@string/parkingFeeContent"
+                            style="@style/feesContent" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        >
+
+                        <ImageView
+                            android:id="@+id/tv_tu"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/qrcode"
+                            />
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="支付宝或者微信支付，请在五分钟内支付完成并驶离"
+                            android:textSize="15dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:layout_below="@id/tv_tu"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
