@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         getRealSize();
         Data();
+		   //ces
 
     }
     //数据初始化
